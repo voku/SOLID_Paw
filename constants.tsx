@@ -95,19 +95,19 @@ export const PRINCIPLES: PrincipleData[] = [
     ],
     learnMoreLinks: [
       {
-        title: "Liskov Substitution Principle - Uncle Bob",
-        url: "https://blog.cleancoder.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html",
-        description: "Understanding behavioral subtyping"
-      },
-      {
-        title: "Barbara Liskov's Original Paper",
+        title: "Liskov Substitution Principle",
         url: "https://en.wikipedia.org/wiki/Liskov_substitution_principle",
-        description: "The mathematical foundation of LSP"
+        description: "Understanding behavioral subtyping and LSP"
       },
       {
-        title: "LSP Violations and How to Fix Them",
+        title: "SOLID Principles: LSP",
         url: "https://stackify.com/solid-design-liskov-substitution-principle/",
         description: "Common violations with practical solutions"
+      },
+      {
+        title: "LSP in Depth",
+        url: "https://www.oodesign.com/liskov-s-substitution-principle",
+        description: "Design patterns and LSP compliance"
       }
     ],
     pupIcon: "alert",
@@ -133,9 +133,9 @@ export const PRINCIPLES: PrincipleData[] = [
     ],
     learnMoreLinks: [
       {
-        title: "Interface Segregation Principle - Uncle Bob",
-        url: "https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html",
-        description: "Why fat interfaces are problematic"
+        title: "Interface Segregation Principle",
+        url: "https://en.wikipedia.org/wiki/Interface_segregation_principle",
+        description: "Understanding ISP and fat interfaces"
       },
       {
         title: "ISP in Practice",
@@ -171,9 +171,9 @@ export const PRINCIPLES: PrincipleData[] = [
     ],
     learnMoreLinks: [
       {
-        title: "Dependency Inversion Principle - Uncle Bob",
-        url: "https://blog.cleancoder.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html",
-        description: "The Hollywood Principle explained"
+        title: "Dependency Inversion Principle",
+        url: "https://en.wikipedia.org/wiki/Dependency_inversion_principle",
+        description: "Understanding DIP and abstraction layers"
       },
       {
         title: "Dependency Injection Tutorial",
