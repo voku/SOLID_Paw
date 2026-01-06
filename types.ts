@@ -6,6 +6,12 @@ export enum PrincipleType {
   DIP = 'DIP',
 }
 
+export interface LearnMoreLink {
+  title: string;
+  url: string;
+  description: string;
+}
+
 export interface PrincipleData {
   id: PrincipleType;
   title: string;
@@ -16,6 +22,7 @@ export interface PrincipleData {
   pragmaticHint: string;
   visualSummary: string;
   signsOfFailure: string[];
+  learnMoreLinks: LearnMoreLink[];
   pupIcon: string;
   pupName: string;
   color: string;

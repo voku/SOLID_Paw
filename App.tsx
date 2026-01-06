@@ -40,7 +40,9 @@ import {
   Search,
   Star,
   Trophy,
-  Award
+  Award,
+  BookOpen,
+  Github
 } from 'lucide-react';
 
 interface InfoCardProps {
@@ -386,6 +388,39 @@ function App() {
                         content={currentPrinciple.pupAnalogy} 
                         accentBg="bg-purple-500"
                       />
+
+                      {/* Learn More Resources */}
+                      {currentPrinciple.learnMoreLinks && currentPrinciple.learnMoreLinks.length > 0 && (
+                        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 md:p-5 rounded-2xl md:rounded-3xl border border-blue-100 shadow-sm">
+                          <div className="flex items-center gap-2 mb-3 md:mb-4">
+                            <div className="p-1.5 bg-blue-500 rounded-lg flex-shrink-0">
+                              <BookOpen className="w-3.5 h-3.5 md:w-4 md:h-4 text-white" aria-hidden="true" />
+                            </div>
+                            <span className="text-[9px] md:text-[10px] font-extrabold uppercase tracking-widest text-blue-700">Learn More</span>
+                          </div>
+                          <div className="space-y-2.5 md:space-y-3">
+                            {currentPrinciple.learnMoreLinks.map((link, index) => (
+                              <a
+                                key={index}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block bg-white p-3 md:p-3.5 rounded-xl md:rounded-2xl border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all group"
+                              >
+                                <div className="flex items-start justify-between gap-2">
+                                  <div className="min-w-0 flex-1">
+                                    <h5 className="font-bold text-blue-900 text-[11px] md:text-[12px] leading-tight mb-1 group-hover:text-blue-600 transition-colors flex items-center gap-1.5">
+                                      {link.title}
+                                      <ExternalLink className="w-2.5 h-2.5 md:w-3 md:h-3 flex-shrink-0 opacity-50 group-hover:opacity-100" />
+                                    </h5>
+                                    <p className="text-[10px] md:text-[11px] text-gray-600 leading-relaxed">{link.description}</p>
+                                  </div>
+                                </div>
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                     <div className="mt-6 md:mt-8 bg-yellow-400/10 p-4 md:p-5 rounded-2xl md:rounded-3xl border border-yellow-400/20 shadow-sm flex gap-3 md:gap-4 transform hover:scale-[1.01] transition-transform">
@@ -531,6 +566,21 @@ function App() {
           <p className="text-gray-400 text-[12px] md:text-sm font-bold leading-relaxed px-4">
               Mission inspired by <a href="https://dev.to/suckup_de/solid-principles-from-paw-patrol-to-the-neighborhood-1008" className="text-blue-400 hover:text-blue-300 underline underline-offset-8 decoration-2 decoration-blue-400/30 transition-all inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">Lars Moelleken's Debriefing <ExternalLink className="w-3 h-3" /></a>
           </p>
+          
+          {/* Contribution Link */}
+          <div className="mt-6 md:mt-8">
+            <a 
+              href="https://github.com/voku/SOLID_Paw" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-xl md:rounded-2xl font-bold text-[11px] md:text-[12px] transition-all border border-gray-700 hover:border-gray-600 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <Github className="w-4 h-4" />
+              <span className="uppercase tracking-wider">Contribute on GitHub</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+
           <div className="mt-8 md:mt-10 flex flex-col items-center gap-3 md:gap-4">
               <div className="p-2.5 md:p-3 bg-gray-800 rounded-xl md:rounded-2xl shadow-inner">
                 <PawPrint className="w-6 h-6 md:w-8 md:h-8 text-gray-600" />
