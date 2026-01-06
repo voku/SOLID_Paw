@@ -1,4 +1,4 @@
-import { PrincipleData, PrincipleType } from './types';
+import { PrincipleData, PrincipleType, LearnMoreLink } from './types';
 
 export const PRINCIPLES: PrincipleData[] = [
   {
@@ -16,6 +16,23 @@ export const PRINCIPLES: PrincipleData[] = [
       "A change in the database schema requires changing logic in your UI-related class.",
       "The class has too many imports/dependencies from unrelated domains.",
       "Multiple team members are constantly editing the same file for different reasons."
+    ],
+    learnMoreLinks: [
+      {
+        title: "Single Responsibility Principle - Uncle Bob",
+        url: "https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html",
+        description: "Robert C. Martin's definitive explanation of SRP"
+      },
+      {
+        title: "SRP: The Single Responsibility Principle",
+        url: "https://web.archive.org/web/20150202200348/http://www.objectmentor.com/resources/articles/srp.pdf",
+        description: "Original paper by Robert C. Martin (PDF)"
+      },
+      {
+        title: "Understanding SOLID: SRP",
+        url: "https://stackify.com/solid-design-principles/",
+        description: "Practical examples and anti-patterns"
+      }
     ],
     pupIcon: "shield",
     color: "text-blue-600",
@@ -38,6 +55,23 @@ export const PRINCIPLES: PrincipleData[] = [
       "You are afraid to add a feature because it might break the 'core' logic.",
       "You find yourself copy-pasting code to handle a slightly different variation of a task."
     ],
+    learnMoreLinks: [
+      {
+        title: "Open-Closed Principle - Uncle Bob",
+        url: "https://blog.cleancoder.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html",
+        description: "Robert C. Martin's explanation of OCP"
+      },
+      {
+        title: "Meyer's Open-Closed Principle",
+        url: "https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle",
+        description: "History and evolution of the principle"
+      },
+      {
+        title: "Strategy Pattern Tutorial",
+        url: "https://refactoring.guru/design-patterns/strategy",
+        description: "Implementing OCP with the Strategy pattern"
+      }
+    ],
     pupIcon: "plus",
     color: "text-green-600",
     bgLight: "bg-green-50",
@@ -58,6 +92,23 @@ export const PRINCIPLES: PrincipleData[] = [
       "The calling code has to check 'instanceof' before calling a method.",
       "A subclass 'weakens' the preconditions of the parent (e.g., accepts fewer inputs).",
       "A subclass 'strengthens' the postconditions (e.g., returns something unexpected)."
+    ],
+    learnMoreLinks: [
+      {
+        title: "Liskov Substitution Principle - Uncle Bob",
+        url: "https://blog.cleancoder.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html",
+        description: "Understanding behavioral subtyping"
+      },
+      {
+        title: "Barbara Liskov's Original Paper",
+        url: "https://en.wikipedia.org/wiki/Liskov_substitution_principle",
+        description: "The mathematical foundation of LSP"
+      },
+      {
+        title: "LSP Violations and How to Fix Them",
+        url: "https://stackify.com/solid-design-liskov-substitution-principle/",
+        description: "Common violations with practical solutions"
+      }
     ],
     pupIcon: "alert",
     color: "text-purple-600",
@@ -80,6 +131,23 @@ export const PRINCIPLES: PrincipleData[] = [
       "The interface has a name like 'EverythingHandler' or 'GlobalInterface'.",
       "Changes to a method you don't even use force you to recompile/redeploy your module."
     ],
+    learnMoreLinks: [
+      {
+        title: "Interface Segregation Principle - Uncle Bob",
+        url: "https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html",
+        description: "Why fat interfaces are problematic"
+      },
+      {
+        title: "ISP in Practice",
+        url: "https://stackify.com/interface-segregation-principle/",
+        description: "Real-world examples of interface segregation"
+      },
+      {
+        title: "Role Interfaces Pattern",
+        url: "https://martinfowler.com/bliki/RoleInterface.html",
+        description: "Martin Fowler on client-specific interfaces"
+      }
+    ],
     pupIcon: "list",
     color: "text-pink-600",
     bgLight: "bg-pink-50",
@@ -100,6 +168,23 @@ export const PRINCIPLES: PrincipleData[] = [
       "You can't unit test a class without having a real database or internet connection.",
       "High-level 'Manager' classes are full of low-level 'SQL' or 'HTTP' details.",
       "Changing your logger requires editing 50 business logic files."
+    ],
+    learnMoreLinks: [
+      {
+        title: "Dependency Inversion Principle - Uncle Bob",
+        url: "https://blog.cleancoder.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html",
+        description: "The Hollywood Principle explained"
+      },
+      {
+        title: "Dependency Injection Tutorial",
+        url: "https://martinfowler.com/articles/injection.html",
+        description: "Martin Fowler's comprehensive guide to DI"
+      },
+      {
+        title: "SOLID Design: DIP",
+        url: "https://stackify.com/dependency-inversion-principle/",
+        description: "Practical implementation patterns"
+      }
     ],
     pupIcon: "share",
     color: "text-orange-600",
