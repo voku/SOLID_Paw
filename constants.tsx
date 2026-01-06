@@ -19,9 +19,9 @@ export const PRINCIPLES: PrincipleData[] = [
     ],
     learnMoreLinks: [
       {
-        title: "Single Responsibility Principle - Uncle Bob",
-        url: "https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html",
-        description: "Robert C. Martin's definitive explanation of SRP"
+        title: "Single Responsibility Principle",
+        url: "https://en.wikipedia.org/wiki/Single-responsibility_principle",
+        description: "Understanding SRP and its importance"
       },
       {
         title: "SRP: The Single Responsibility Principle",
@@ -57,19 +57,19 @@ export const PRINCIPLES: PrincipleData[] = [
     ],
     learnMoreLinks: [
       {
-        title: "Open-Closed Principle - Uncle Bob",
-        url: "https://blog.cleancoder.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html",
-        description: "Robert C. Martin's explanation of OCP"
-      },
-      {
-        title: "Meyer's Open-Closed Principle",
+        title: "Open-Closed Principle",
         url: "https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle",
-        description: "History and evolution of the principle"
+        description: "Understanding OCP and its evolution"
       },
       {
         title: "Strategy Pattern Tutorial",
         url: "https://refactoring.guru/design-patterns/strategy",
         description: "Implementing OCP with the Strategy pattern"
+      },
+      {
+        title: "SOLID: Open-Closed Principle",
+        url: "https://stackify.com/solid-design-open-closed-principle/",
+        description: "Practical examples and implementation"
       }
     ],
     pupIcon: "plus",
