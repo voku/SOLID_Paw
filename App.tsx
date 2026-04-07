@@ -264,7 +264,6 @@ function App() {
             aria-label={`Switch to ${language === 'en' ? 'German' : 'English'}`}
             className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-blue-100 shadow-sm text-[11px] font-black uppercase tracking-widest text-blue-600 hover:bg-blue-50 hover:border-blue-300 transition-all"
           >
-            <span>{language === 'en' ? '🇩🇪' : '🇬🇧'}</span>
             <span>{t.toggleLabel}</span>
           </button>
 
