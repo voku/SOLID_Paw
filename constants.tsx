@@ -192,3 +192,196 @@ export const PRINCIPLES: PrincipleData[] = [
     borderColor: "border-orange-200"
   }
 ];
+
+export const PRINCIPLES_DE: PrincipleData[] = [
+  {
+    id: PrincipleType.SRP,
+    title: "Einzelverantwortung",
+    subtitle: "Eine Aufgabe, eine Zuständigkeit",
+    pupName: "Chase",
+    officialDef: "Jedes Modul oder jede Klasse sollte die Verantwortung für genau einen Teil der Funktionalität der Software tragen.",
+    whyItMatters: "Bei einer Rettungsmission ist Klarheit lebensrettend. Wenn Chase gleichzeitig navigieren, Spuren schnüffeln UND das Feuerwehrauto reparieren soll, wird er zwangsläufig scheitern. Code funktioniert genauso: Klassen mit zu vielen Aufgaben werden zu 'Gott-Objekten', die beängstigend schwer zu ändern sind, weil eine Änderung an einer 'Aufgabe' alle anderen bricht.",
+    pupAnalogy: "Chase kümmert sich um Polizei und Spurensuche. Marshall kümmert sich um Feuer. Wenn die Mission beginnt, fragt Ryder nicht einen einzigen Welpen, alles zu tun. Jeder Welpe hat ein spezialisiertes 'Welpen-Pack'. Wenn Chase einen Feuerwehrschlauch tragen würde, würde sein Tracking-Gerät nicht mehr hineinpassen!",
+    pragmaticHint: "Wenn du nicht beschreiben kannst, was eine Klasse tut, ohne das Wort 'und' zu benutzen, hat sie zu viele Verantwortlichkeiten.",
+    visualSummary: "Ein Welpe, ein Pack, ein Zweck.",
+    signsOfFailure: [
+      "Der Klassenname enthält 'Manager', 'Util' oder 'Service' und hat über 500 Zeilen.",
+      "Eine Änderung im Datenbankschema erfordert Änderungen in einer UI-Klasse.",
+      "Die Klasse hat zu viele Importe aus unverwandten Bereichen.",
+      "Mehrere Teammitglieder bearbeiten ständig dieselbe Datei aus verschiedenen Gründen."
+    ],
+    learnMoreLinks: [
+      {
+        title: "Single Responsibility Principle",
+        url: "https://en.wikipedia.org/wiki/Single-responsibility_principle",
+        description: "SRP und seine Bedeutung verstehen"
+      },
+      {
+        title: "SRP: Das Single Responsibility Principle",
+        url: "https://web.archive.org/web/20150202200348/http://www.objectmentor.com/resources/articles/srp.pdf",
+        description: "Originalartikel von Robert C. Martin (PDF)"
+      },
+      {
+        title: "SOLID verstehen: SRP",
+        url: "https://stackify.com/solid-design-principles/",
+        description: "Praktische Beispiele und Anti-Muster"
+      }
+    ],
+    pupIcon: "shield",
+    color: "text-blue-600",
+    bgLight: "bg-blue-50",
+    borderColor: "border-blue-200"
+  },
+  {
+    id: PrincipleType.OCP,
+    title: "Offen-Geschlossen",
+    subtitle: "Offen für Erweiterung, geschlossen für Änderung",
+    pupName: "Everest",
+    officialDef: "Objekte oder Einheiten sollten offen für Erweiterungen, aber geschlossen für Modifikationen sein. Das bedeutet, neue Funktionalität hinzufügen zu können, ohne bestehenden Code zu verändern.",
+    whyItMatters: "Die Abenteuerbucht wächst! Mal brauchen wir eine Schneerettung, mal eine Dschungelrettung. Wenn wir den Aussichtsturm jedes Mal neu bauen müssten, wenn ein neuer Welpe dazukommt, würden wir nie fertig werden. Wir brauchen ein System, in das wir neue Welpen 'einstecken' können, ohne das Fundament anzutasten.",
+    pupAnalogy: "Die Rutsche im Aussichtsturm ist 'geschlossen'. Wir bauen sie nicht um. Aber sie ist 'offen' für jeden Welpen, der sie benutzen kann! Ob Skye mit ihrem Flugpack oder Zuma mit seinem Tauchgerät – die Rutsche funktioniert für alle, ohne Modifikation.",
+    pragmaticHint: "Das 'Strategy-Pattern' ist der beste Freund des Open/Closed-Prinzips.",
+    visualSummary: "Nicht den Motor ändern, nur die Aufsätze wechseln.",
+    signsOfFailure: [
+      "Riesige 'switch'- oder 'if-else'-Ketten, die Typen prüfen.",
+      "Das Hinzufügen einer neuen Funktion erfordert das Öffnen und Bearbeiten von 5 verschiedenen bestehenden Dateien.",
+      "Du hast Angst, eine Funktion hinzuzufügen, weil sie die 'Kernlogik' brechen könnte.",
+      "Du kopierst Code, um eine leicht abweichende Variante einer Aufgabe zu behandeln."
+    ],
+    learnMoreLinks: [
+      {
+        title: "Open-Closed Principle",
+        url: "https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle",
+        description: "OCP und seine Entwicklung verstehen"
+      },
+      {
+        title: "Strategy-Pattern Tutorial",
+        url: "https://refactoring.guru/design-patterns/strategy",
+        description: "OCP mit dem Strategy-Pattern umsetzen"
+      },
+      {
+        title: "SOLID: Open-Closed-Prinzip",
+        url: "https://stackify.com/solid-design-open-closed-principle/",
+        description: "Praktische Beispiele und Implementierung"
+      }
+    ],
+    pupIcon: "plus",
+    color: "text-green-600",
+    bgLight: "bg-green-50",
+    borderColor: "border-green-200"
+  },
+  {
+    id: PrincipleType.LSP,
+    title: "Liskovsches Substitutionsprinzip",
+    subtitle: "Halte deine Versprechen",
+    pupName: "Ryder",
+    officialDef: "Wenn S ein Untertyp von T ist, können Objekte vom Typ T durch Objekte vom Typ S ersetzt werden, ohne die gewünschten Eigenschaften des Programms zu verändern.",
+    whyItMatters: "Ryder muss wissen, dass jedes 'Fahrzeug', das er zur Brücke ruft, diese auch überqueren kann. Wenn ein 'Fahrzeug' entworfen wird, das nur auf Schnee fahren kann, sollte es nicht dort eingesetzt werden, wo ein generisches Fahrzeug erwartet wird. Wenn es die Regeln des Elterntyps bricht, bricht es die Mission.",
+    pupAnalogy: "Ryder sagt allen Welpen: 'Jedes Fahrzeug in der Flotte muss auf eine Sirene reagieren können.' Wenn der Schneepflug ein 'Fahrzeug' ist, aber nur bei Frost anspringt, ist er bei einer Sommermission kein echter Ersatz für ein Flottenfahrzeug!",
+    pragmaticHint: "Wenn es wie eine Ente aussieht und wie eine Ente quakt, aber Batterien braucht, verletzt es wahrscheinlich das LSP.",
+    visualSummary: "Respektiere den Vertrag. Unterklassen müssen die Versprechen der Elternklasse halten.",
+    signsOfFailure: [
+      "Methoden in einer Unterklasse werfen 'NotSupportedException'.",
+      "Der aufrufende Code muss 'instanceof' prüfen, bevor er eine Methode aufruft.",
+      "Eine Unterklasse 'schwächt' die Vorbedingungen der Elternklasse (akzeptiert weniger Eingaben).",
+      "Eine Unterklasse 'verschärft' die Nachbedingungen (gibt etwas Unerwartetes zurück)."
+    ],
+    learnMoreLinks: [
+      {
+        title: "Liskovsches Substitutionsprinzip",
+        url: "https://en.wikipedia.org/wiki/Liskov_substitution_principle",
+        description: "Verhaltensbezogenes Subtyping und LSP verstehen"
+      },
+      {
+        title: "SOLID-Prinzipien: LSP",
+        url: "https://stackify.com/solid-design-liskov-substitution-principle/",
+        description: "Häufige Verstöße mit praktischen Lösungen"
+      },
+      {
+        title: "LSP im Detail",
+        url: "https://www.oodesign.com/liskov-s-substitution-principle",
+        description: "Design-Patterns und LSP-Konformität"
+      }
+    ],
+    pupIcon: "alert",
+    color: "text-purple-600",
+    bgLight: "bg-purple-50",
+    borderColor: "border-purple-200"
+  },
+  {
+    id: PrincipleType.ISP,
+    title: "Interface-Segregation",
+    subtitle: "Erzwinge keine nutzlosen Fähigkeiten",
+    pupName: "Skye",
+    officialDef: "Kein Client sollte gezwungen sein, von Methoden abzuhängen, die er nicht verwendet. Große Interfaces sollten in kleinere, spezifischere aufgeteilt werden.",
+    whyItMatters: "Skyes Hubschrauber-Pack ist aus gutem Grund leicht. Wenn ihr Pack Marshalls schweren Feuerschlauch tragen müsste, nur weil es ein 'Standard-Welpen-Pack' ist, könnte sie nicht fliegen. Welpen (und Klassen) sollten nur die Werkzeuge tragen, die sie für ihre spezifische Aufgabe wirklich brauchen.",
+    pupAnalogy: "Skye braucht 'Flugausrüstung'. Marshall braucht 'Feuerausrüstung'. Beide sind 'Welpen-Ausrüstung', aber Skye sollte nicht wissen müssen, wie man eine Wasserpumpe anlässt, nur um ihre Flügel zu benutzen! Wir halten die Ausrüstungsspezifikationen getrennt, damit sie leicht und wendig bleiben.",
+    pragmaticHint: "Große Interfaces sind 'verschmutzte' Interfaces. Räume sie auf, indem du sie aufteilst.",
+    visualSummary: "Packe nur, was du brauchst. Leichter Code ist schneller Code.",
+    signsOfFailure: [
+      "Du implementierst ein Interface, lässt aber mehrere Methoden leer oder lässt sie Fehler werfen.",
+      "Eine Klasse muss 10 Dinge importieren, nur um ein kleines Interface zu implementieren.",
+      "Das Interface hat einen Namen wie 'EverythingHandler' oder 'GlobalInterface'.",
+      "Änderungen an einer Methode, die du gar nicht verwendest, zwingen dich, dein Modul neu zu kompilieren."
+    ],
+    learnMoreLinks: [
+      {
+        title: "Interface Segregation Principle",
+        url: "https://en.wikipedia.org/wiki/Interface_segregation_principle",
+        description: "ISP und aufgeblähte Interfaces verstehen"
+      },
+      {
+        title: "ISP in der Praxis",
+        url: "https://stackify.com/interface-segregation-principle/",
+        description: "Reale Beispiele für Interface-Segregation"
+      },
+      {
+        title: "Role-Interfaces-Pattern",
+        url: "https://martinfowler.com/bliki/RoleInterface.html",
+        description: "Martin Fowler über clientspezifische Interfaces"
+      }
+    ],
+    pupIcon: "list",
+    color: "text-pink-600",
+    bgLight: "bg-pink-50",
+    borderColor: "border-pink-200"
+  },
+  {
+    id: PrincipleType.DIP,
+    title: "Abhängigkeitsinversion",
+    subtitle: "Hänge von Abstraktionen ab",
+    pupName: "Ryder",
+    officialDef: "Module höherer Ebene sollten nicht von Modulen niedrigerer Ebene abhängen. Beide sollten von Abstraktionen abhängen. Abstraktionen sollten nicht von Details abhängen. Details sollten von Abstraktionen abhängen.",
+    whyItMatters: "Ryder interessiert nicht, *welcher* Welpe das Feuer löscht, sondern nur, dass *das Feuer gelöscht wird*. Wenn die Missionslogik explizit 'Ruf Marshall' sagte, und Marshall im Urlaub war, würde die Stadt brennen. Indem er vom Konzept eines 'Feuerwehrmanns' abhängt, kann Ryder jeden schicken, der die Rolle erfüllt.",
+    pupAnalogy: "Ryders Kommando-Tablet spricht nicht mit 'Marshalls spezifischem Funk'. Es spricht mit der 'Rettungsfrequenz'. Jeder Welpe kann sich auf diese Frequenz einschalten und Befehle empfangen. Ryder ist vom spezifischen Welpen entkoppelt!",
+    pragmaticHint: "Ruf uns nicht an, wir rufen dich an. (Das Hollywood-Prinzip der Abhängigkeitsinjektion).",
+    visualSummary: "Verbinde dich mit dem Interface, nicht mit dem Kabel.",
+    signsOfFailure: [
+      "Du verwendest das 'new'-Schlüsselwort in deiner Geschäftslogik, um Hilfsobjekte zu erstellen.",
+      "Du kannst eine Klasse nicht ohne eine echte Datenbank oder Internetverbindung testen.",
+      "High-Level-'Manager'-Klassen sind voll mit Low-Level-'SQL'- oder 'HTTP'-Details.",
+      "Das Ändern deines Loggers erfordert das Bearbeiten von 50 Geschäftslogik-Dateien."
+    ],
+    learnMoreLinks: [
+      {
+        title: "Dependency Inversion Principle",
+        url: "https://en.wikipedia.org/wiki/Dependency_inversion_principle",
+        description: "DIP und Abstraktionsschichten verstehen"
+      },
+      {
+        title: "Dependency Injection Tutorial",
+        url: "https://martinfowler.com/articles/injection.html",
+        description: "Martin Fowlers umfassender Leitfaden zu DI"
+      },
+      {
+        title: "SOLID Design: DIP",
+        url: "https://stackify.com/dependency-inversion-principle/",
+        description: "Praktische Implementierungsmuster"
+      }
+    ],
+    pupIcon: "share",
+    color: "text-orange-600",
+    bgLight: "bg-orange-50",
+    borderColor: "border-orange-200"
+  }
+];
