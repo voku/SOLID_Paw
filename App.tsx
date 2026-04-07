@@ -84,7 +84,7 @@ function App() {
   const t = TRANSLATIONS[language];
   const principles = language === 'de' ? PRINCIPLES_DE : PRINCIPLES;
 
-  const currentPrinciple = principles.find(p => p.id === activeTab)!;;
+  const currentPrinciple = principles.find(p => p.id === activeTab)!;
 
   const onMastered = (id: string) => {
     if (!mastered.has(id)) {
